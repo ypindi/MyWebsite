@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<!-- <h1>This is the home page</h1> -->
+
+<h1 align="center">Your Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close" onclick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+      <!-- aria-hidden so that it is not visible by default -->
+      <!-- onclick is making a request to the backend. we are sending the ID of the
+       note we want to delete too to the backend. -->
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+
+<form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div>
+</form>
+
+{% endblock %}
