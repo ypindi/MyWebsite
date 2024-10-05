@@ -14,6 +14,7 @@ ensures persistent storage of notes, allowing users to access their data after l
 5. HTML, CSS, and JavaScript: For front-end templates and interactivity.
 
 ## 3 Folder Structure
+```
 /Notes_App_Full-Stack_Web_Application
 │
 ├── instance/
@@ -35,7 +36,7 @@ ensures persistent storage of notes, allowing users to access their data after l
 ├── main.py                # Main file to run the Flask application
 ├── requirements.txt       # Project dependencies (Flask, Flask-Login, Flask-SQLAlchemy, etc.)
 ├── Notes.txt              # General notes for the project
-
+```
 
 ## 4 Application Functionality
 
